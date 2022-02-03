@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 # Python 3 script to build the analyzer
 
 import os, glob, platform
@@ -45,6 +46,11 @@ link_dependencies = [ "-lAnalyzer" ] #refers to libAnalyzer.dylib or libAnalyzer
 
 debug_compile_flags = "-O0 -w -c -fpic -g"
 release_compile_flags = "-O3 -w -c -fpic"
+
+
+class Exception:
+    pass
+
 
 def run_command(cmd):
     "Display cmd, then run it in a subshell, raise if there's an error"
